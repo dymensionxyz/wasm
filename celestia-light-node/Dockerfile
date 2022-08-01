@@ -26,12 +26,13 @@ COPY --from=go-builder /app/celestia-node/celestia-test-key.pk .
 
 ENV CELESTIA_BRIDGE_NODE_ENDPOINT=rpc-mamaki.pops.one:9090
 ENV WALLET_KEY_NAME=dymension-test
+ENV WALLET_KEY_PASSWORD='12345678'
 
 # Init the node
 RUN celestia light init --core.grpc $CELESTIA_BRIDGE_NODE_ENDPOINT
 
 # Fetch the key for celestia light node and sleep for a few seconds
-RUN echo '12345678' | cel-key import $WALLET_KEY_NAME ./celestia-test-key.pk --keyring-backend test --node.type light
+RUN echo $WALLET_KEY_PASSWORD | cel-key import $WALLET_KEY_NAME ./celestia-test-key.pk --keyring-backend test --node.type light
 
 EXPOSE 26658 9090
 
