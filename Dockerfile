@@ -13,7 +13,7 @@ RUN apk add git
 # RUN apk add libusb-dev linux-headers
 
 WORKDIR /code
-COPY .. /code/
+COPY . /code/
 
 # See https://github.com/CosmWasm/wasmvm/releases
 ADD https://github.com/CosmWasm/wasmvm/releases/download/v1.0.0/libwasmvm_muslc.aarch64.a /lib/libwasmvm_muslc.aarch64.a
@@ -34,7 +34,7 @@ FROM alpine:3.15
 
 COPY --from=go-builder /code/build/wasmd /usr/local/bin/
 
-COPY setup_and_run_wasmd.sh /opt/
+COPY dymension-wasm-node/*.sh /opt/
 RUN chmod +x /opt/*.sh
 
 WORKDIR /opt
@@ -46,4 +46,4 @@ EXPOSE 26656
 # tendermint rpc
 EXPOSE 26657
 
-CMD ["/opt/setup_and_run_wasmd.sh"]
+CMD ["/usr/bin/wasmd", "version"]
