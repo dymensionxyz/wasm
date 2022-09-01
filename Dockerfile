@@ -34,7 +34,7 @@ FROM alpine:3.15
 
 COPY --from=go-builder /code/build/wasmd /usr/local/bin/
 
-COPY dymension-wasm-node/*.sh /opt/
+COPY dymension_wasm_node/*.sh /opt/
 RUN chmod +x /opt/*.sh
 
 WORKDIR /opt
