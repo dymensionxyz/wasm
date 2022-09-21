@@ -31,4 +31,4 @@ wasmd start --dymint.aggregator true \
   --dymint.settlement_layer mock \
   --dymint.block_batch_size 1000 \
   --dymint.namespace_id "$NAMESPACE_ID" \
-  --dymint.block_time 1s
+  --dymint.block_time 0.2s
