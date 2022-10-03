@@ -1,3 +1,3 @@
-# dYmension Wasm Rollapp
-Dymension optimistic rollapp built using the RDK and dymint
+# dYmension Wasm RollApp
 
+dYmension RollApp built using the [dYmension RDK](https://github.com/dymensionxyz/rdk) and [dymint](https://github.com/dymensionxyz/dymint).
