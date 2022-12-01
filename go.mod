@@ -72,7 +72,7 @@ require (
 	github.com/dustin/go-humanize v1.0.1-0.20200219035652-afde56e7acac // indirect
 	github.com/dymensionxyz/cosmosclient v0.2.0-alpha // indirect
 	github.com/dymensionxyz/dymension v0.0.0-20220906152713-9cfb350c86bd // indirect
-	github.com/dymensionxyz/dymint v0.2.0-alpha // indirect
+	github.com/dymensionxyz/dymint v0.2.2-alpha // indirect
 	github.com/elastic/gosigar v0.14.2 // indirect
 	github.com/felixge/httpsnoop v1.0.2 // indirect
 	github.com/flynn/noise v1.0.0 // indirect
@@ -256,4 +256,4 @@ replace (
 	google.golang.org/grpc => google.golang.org/grpc v1.33.2
 )
 
-replace github.com/cosmos/cosmos-sdk => github.com/dymensionxyz/rdk v0.1.1-alpha
+replace github.com/cosmos/cosmos-sdk => github.com/dymensionxyz/rdk v0.1.0-sdk-v0.45.8-dymint-v0.1.0-alpha.0.20221201140523-ff9f10749088
