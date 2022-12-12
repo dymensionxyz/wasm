@@ -7,7 +7,6 @@ NAMESPACE_ID=${NAMESPACE_ID:-000000000000FFFF}
 TOKEN_AMOUNT=${TOKEN_AMOUNT:-10000000000000000000000000uwasm}
 STAKING_AMOUNT=${STAKING_AMOUNT:-1000000000uwasm}
 
-KEY_NAME="local-user"
 ROLLAPP_ID="local-rollapp"
 SETTLEMENT_RPC="0.0.0.0:36657"
 SETTLEMENT_CONFIG="{\"node_address\": \"http:\/\/$SETTLEMENT_RPC\", \"rollapp_id\": \"$ROLLAPP_ID\", \"dym_account_name\": \"$KEY_NAME\", \"keyring_home_dir\": \"$HOME/.dymension/\", \"keyring_backend\":\"test\"}"
